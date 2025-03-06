@@ -1,0 +1,86 @@
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+
+{
+   "email": "kyrie@gmail.com",
+   "password": "password"
+}
+
+
+# register user
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "kyrie Irving",
+    "email": "kyrie@gmail.com",
+    "password": "password"
+}
+
+# get users
+###
+GET http://localhost:5000/api/auth/users
+
+
+# get user
+###
+GET http://localhost:5000/api/auth/67bfe5e04982fd9494565ad4
+
+# update user
+###
+PUT http://localhost:5000/api/auth/67bfe5e04982fd9494565ad4
+Content-Type: application/json
+
+{
+    "name": "new kofi",
+    "password": "password"
+}
+
+# delete user
+###
+DELETE http://localhost:5000/api/auth/67bfe5e04982fd9494565ad4
+
+###
+GET http://localhost:5000/api/auth/logout
+
+# contacts
+
+#create contact
+###
+POST http://localhost:5000/api/contacts
+Content-Type: application/json
+
+{
+    "name": "test test 11",
+    "phoneNumber": 23344555,
+    "email": "test@gmail.com"
+}
+
+# get contacts
+###
+GET http://localhost:5000/api/contacts
+
+###
+GET http://localhost:5000/api/contacts/67c96c8e8b0374cc1c8d5311
+
+
+# update contact
+###
+PUT http://localhost:5000/api/contacts/67c96c8e8b0374cc1c8d5311
+Content-Type: application/json
+
+{
+    "name": "test 9 billy carson 23333",
+    "email": "test@gmail.com"
+}
+
+
+# delete contact
+###
+DELETE http://localhost:5000/api/contacts/67c96c9e8b0374cc1c8d5317
+
+# clear contacts
+###
+DELETE  http://localhost:5000/api/contacts/clear

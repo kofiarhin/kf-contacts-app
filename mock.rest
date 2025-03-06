@@ -1,0 +1,134 @@
+#get Users
+###
+GET http://localhost:5000/api/users?userType=photographer
+
+
+#get users
+###
+GET http://localhost:5000/api/users/65fdd921da1528c2b7a6e73b
+
+
+# delete user
+###
+DELETE http://localhost:5000/api/users/65f6cdb7049575988407e425
+
+# login user
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "kofiarhin@gmail.com",
+    "password": "password"
+}
+
+# logout user
+###
+GET http://localhost:5000/api/auth/logout
+
+# check auth 
+###
+GET http://localhost:5000/api/check
+
+# register user
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "john doe ",
+    "email": "johndoe@gmail.com",
+    "password": "password",
+    "location": "sheffield",
+    "dob": "2002-02-01",
+    "phoneNumber": "234324324324",
+    "instagramUrl": "some instagram handle", 
+    "userType": "photographer"
+}
+
+# create casting
+###
+POST http://localhost:5000/api/castings
+Content-Type: application/json
+
+{
+    "userId": "65f789febcb5c83891a1962a",
+    "title": "some casting title",
+    "location": "Manchester",
+    "startDate": "2024-07-04",
+    "endDate": "2024-07-14",
+    "message": "some message", 
+    "paid": true 
+}
+
+#get castings
+###
+GET http://localhost:5000/api/castings
+
+# get single casting
+###
+GET http://localhost:5000/api/castings/65fad3cfb54c02a9fd5fa6dc
+
+# update casting
+###
+PUT http://localhost:5000/api/castings/65fad3cfb54c02a9fd5fa6dc
+Content-Type: application/json
+
+{
+    "title": "updated Casting"
+}
+
+# delete casting
+###
+DELETE http://localhost:5000/api/castings/65f9a76d003ad3e25b7eb4e4
+
+#upload image
+###
+POST http://localhost:5000/api/images/65f9a76d003ad3e25b7eb4e4
+Content-Type: application/json
+
+{
+    "images": ["image.6.jpg", "image7.jpg"]
+}
+
+
+#delete image
+###
+DELETE http://localhost:5000/api/images/65f9a76d003ad3e25b7eb4e4
+Content-Type: application/json
+
+{
+    "url": "image3.jpg"
+}
+
+# get images
+###
+GET http://localhost:5000/api/images/65fdd921da1528c2b7a6e73b
+
+#merged data
+###
+GET http://localhost:5000/api/users/mergeddata?userType=model
+
+
+# cerate casting new
+###
+POST  http://localhost:5000/api/castings
+Content-Type: application/json
+
+{
+    "title": "some title",
+    "message": "some message",
+    "location": "sheffield",
+    "paid": false,
+    "startDate": "2024-11-11",
+    "endDate": "2024-12-22",
+    "images": ["image 1", "image 2", "image3" ]
+}
+
+#get casting
+###
+GET http://localhost:5000/api/castings/6602e9ef1c130d40b1ee2f54
+
+# get casings
+###
+GET http://localhost:5000/api/castings
