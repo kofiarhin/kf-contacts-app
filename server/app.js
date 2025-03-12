@@ -9,10 +9,13 @@ const auth = require("./middleware/auth");
 
 //connnect to datadbase
 connectDB();
+
 // setup middlewares
 app.use(cookieParser());
 app.use(express.json());
+
 // setup routes
 app.use("/api/auth", authRoutes);
 app.use("/api/contacts", contactRoutes);
+
 module.exports = app;

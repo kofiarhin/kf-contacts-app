@@ -1,0 +1,16 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+  nav a {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  nav button {
+    display: inline-block;
+    margin-left: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+}
