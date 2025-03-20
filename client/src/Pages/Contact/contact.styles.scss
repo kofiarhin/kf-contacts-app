@@ -1,0 +1,23 @@
+.current-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 200px;
+  }
+  .button-wrapper {
+    padding: 1rem 0rem;
+    button {
+      padding: 0.8rem 1rem;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 1rem;
+      &.danger {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+}

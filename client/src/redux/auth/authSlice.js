@@ -30,6 +30,7 @@ export const login = createAsyncThunk(
         body: JSON.stringify(userData),
       });
       const data = await res.json();
+      localStorage.setItem("user", JSON.stringify(data));
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue({
@@ -69,8 +70,10 @@ export const register = createAsyncThunk(
   }
 );
 
+const user = JSON.parse(localStorage.getItem("user"));
+
 const initialState = {
-  user: null,
+  user: user ? user : null,
   isLoading: false,
   isError: false,
   isSuccess: false,

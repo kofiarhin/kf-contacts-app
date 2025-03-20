@@ -21,6 +21,8 @@ const header = () => {
         {user ? (
           <>
             <Link to="/dashboard">Dashboard</Link>
+            <Link to="/add-contact">Add Contact</Link>
+            <Link to="/contacts">Contacts</Link>
             <button onClick={handleLogout}> Logout</button>
           </>
         ) : (

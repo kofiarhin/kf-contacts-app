@@ -13,14 +13,13 @@ const Login = () => {
 
   useEffect(() => {
     if (user) {
-      console.log("you have successfully login");
       navigate("/dashboard");
     }
     dispatch(reset());
   }, [user, isSuccess]);
   const [formData, setFormData] = useState({
     name: "test2",
-    email: "test2@gmail.com",
+    email: "kyrie@gmail.com",
     password: "password",
   });
 
